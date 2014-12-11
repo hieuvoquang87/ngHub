@@ -5,7 +5,8 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
   'myApp.view2',
-  'myApp.version'
+  'myApp.version',
+  'ngHub'
 ])
         .config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});
@@ -66,6 +67,7 @@ angular.module('myApp', [
 
                         });
                     }
+            $scope.count = $scope.count * 6;        
             var endTime = new Date().getTime();
             $scope.time = (endTime - startTime)/1000;
             

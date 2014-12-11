@@ -4,7 +4,7 @@
  * - group Request
  * - nested reply
  */
-angular.module('myApp').service('ngHub',function() {
+angular.module('ngHub',[]).service('ngHub',function() {
     
     var eventRegisterList = {};
     var groupList = {};
